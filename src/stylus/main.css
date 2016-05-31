@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  word-break:break-all;
+  word-wrap: break-word;
+}
+
+.envelope {
+  padding: 10px;
+  background: -moz-repeating-linear-gradient(135deg, #1966FE, #1966FE 10px, #FEFEFE 20px, #FF3A1C 40px);/* FF3.6+ */
+  background: -webkit-repeating-gradient(linear, 135deg, color-stop(10px, 1966FE), color-stop(20px, FEFEFE), color-stop(40px, FF3A1C));/* Chrome,Safari4+ */
+  background: -webkit-repeating-linear-gradient(135deg, #1966FE, #1966FE 10px, #FEFEFE 20px, #FF3A1C 40px);/* Chrome10+,Safari5.1+ */
+  background: -o-repeating-linear-gradient(135deg, #1966FE, #1966FE 10px, #FEFEFE 20px, #FF3A1C 40px);/* Opera 11.10+ */
+  background: -ms-linear-gradient(135deg, #1966FE, #1966FE 10px, #FEFEFE 20px, #FF3A1C 40px);/* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+  background: repeating-linear-gradient(135deg, #1966FE, #1966FE 10px, #FEFEFE 20px, #FF3A1C 40px);/* W3C */
+}
+
+.content {
+  background-color: #fff;
+  color: #636367;
+}
+
+.content img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.content>p {
+  font-size: 15px;
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.letterWrap {
+  border-bottom: 5px solid #f3f3f3;
+}
+
+.letterWrap:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.letterWrap .titleWrap {
+  height: 75px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  border-top: solid 1px #f3f3f3;
+  border-bottom: solid 1px #f3f3f3;
+}
+
+.letterWrap .titleWrap{
+  font-size: 15px;
+  color: #9a9a9a;
+}
+
+.letterWrap .titleWrap .admin {
+  line-height: 22px;
+}
+
+.letterWrap .letterContent {
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.audioWrap {
+  margin: 15px 0;
+}
+
+.audioWrap:nth-child(1) {
+  margin-top: 0px;
+}
+
+.audioWrap:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.audioBar {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 240px;
+  background-color: #f2f2f2;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+}
+
+.audioBar.playing {
+  background-color: #dbdbdb;
+}
+
+.audioBar.playing::after {
+  animation: playingAudio 1.5s steps(3) infinite;
+  -webkit-animation: playingAudio 1.5s steps(3) infinite;
+}
+
+@keyframes playingAudio {
+  0% {
+    background-position: 5px -4px;
+  }
+
+  100% {
+    background-position: 5px -112px;
+  }
+}
+
+@-webkit-keyframes playingAudio {
+  0% {
+    background-position: 5px -4px;
+  }
+
+  100% {
+    background-position: 5px -112px;
+  }
+}
+
+.audioBar::after {
+  content: " ";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -13px;
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-image: url('../images/audios.png');
+  background-size: 23px 104px;
+  background-position: 5px -76px;
+}
+
+.audioLength {
+  margin-left: 10px;
+}
+
+.broadcast>p {
+  text-indent: 2em;
+  margin: 10px 0;
+}
+
+.broadcast>p:nth-child(1),.broadcast>p:nth-child(2) {
+  text-indent: 0px;
+}
+
+@media screen and (min-width:320px) {
+  .letterWrap .textWrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width:380px) {
+  .letterWrap .textWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width:410px) {
+  .letterWrap .textWrap {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
